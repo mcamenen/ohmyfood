@@ -1,0 +1,7 @@
+location <i class="fa-solid fa-location-dot"></i>
+phone <i class="fa-solid fa-mobile-screen-button"></i>
+list <i class="fa-sharp fa-solid fa-list-ul"></i>
+store <i class="fa-solid fa-store"></i>
+heart <i class="fa-regular fa-heart"></i>
+ustensils <i class="fa-solid fa-utensils"></i>
+handshake <i class="fa-solid fa-handshake-angle"></i>

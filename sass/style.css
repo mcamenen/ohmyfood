@@ -1,0 +1,445 @@
+@charset "UTF-8";
+/* Breakpoint pour media queries */
+/* Partie couleur - général */
+/* Partie couleur de fond */
+/* Partie style du texte */
+h1, h2, h3, h4, h5, p {
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Shrikhand";
+  font-style: italic;
+}
+
+h2, h3, h4, h5 {
+  font-family: "Roboto";
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Partie body - main - général */
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 375px;
+  margin: 0px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  main {
+    width: 1440px;
+  }
+}
+
+/* Partie logo - marque */
+header h1 {
+  width: 100%;
+  height: 63px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  header h1 {
+    height: 96px;
+  }
+}
+
+/* Partie localisation des restaurants les plus proches */
+.adress {
+  background-color: #eaeaea;
+  width: 100%;
+  height: 50px;
+  color: #353535;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+
+/* Partie exploration des restaurants du site */
+.explore {
+  width: 100%;
+  height: 287px;
+  background-color: #f6f6f6;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .explore {
+    height: 238.62px;
+  }
+}
+.explore h2 {
+  width: 275px;
+  height: 68px;
+  position: absolute;
+  top: 152px;
+}
+@media (min-width: 1024px) {
+  .explore h2 {
+    width: 645px;
+    height: 47px;
+    top: 176px;
+    font-size: 40px;
+  }
+}
+.explore h3 {
+  font-weight: 300;
+  width: 315px;
+  height: 46px;
+  position: absolute;
+  top: 220px;
+}
+@media (min-width: 1024px) {
+  .explore h3 {
+    width: 531px;
+    top: 241px;
+    display: flex;
+    align-items: center;
+  }
+}
+.explore h5 {
+  width: 218px;
+  height: 50px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  color: white;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 293px;
+}
+@media (min-width: 1024px) {
+  .explore h5 {
+    top: 305px;
+  }
+}
+
+/* Partie choix du client en 3 étapes*/
+.choice {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  height: 440px;
+  display: flex;
+}
+@media (min-width: 1024px) {
+  .choice {
+    height: 228.38px;
+    padding: 50px 180px 50px 180px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.choice h2 {
+  width: 275px;
+  height: 31px;
+  position: absolute;
+  top: 448px;
+}
+@media (min-width: 1024px) {
+  .choice h2 {
+    position: static;
+  }
+}
+@media (min-width: 1024px) {
+  .choice .choice-btn {
+    width: 1053px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.choice .choice-btn .choice-restaurant, .choice .choice-btn .choice-meal, .choice .choice-btn .choice-place {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f6f6f6;
+  width: 335px;
+  height: 72.38px;
+  border-radius: 20px;
+  margin-left: 12.51px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.choice .choice-btn .choice-restaurant p, .choice .choice-btn .choice-meal p, .choice .choice-btn .choice-place p {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -12px;
+  background-color: #9356DC;
+  color: white;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .choice .choice-btn .choice-restaurant p, .choice .choice-btn .choice-meal p, .choice .choice-btn .choice-place p {
+    position: relative;
+  }
+}
+.choice .choice-btn .choice-restaurant i, .choice .choice-btn .choice-meal i, .choice .choice-btn .choice-place i {
+  position: absolute;
+  left: 35px;
+}
+@media (min-width: 1024px) {
+  .choice .choice-btn .choice-restaurant i, .choice .choice-btn .choice-meal i, .choice .choice-btn .choice-place i {
+    position: relative;
+  }
+}
+.choice .choice-btn .choice-restaurant h5, .choice .choice-btn .choice-meal h5, .choice .choice-btn .choice-place h5 {
+  position: absolute;
+  left: 73.49px;
+}
+@media (min-width: 1024px) {
+  .choice .choice-btn .choice-restaurant h5, .choice .choice-btn .choice-meal h5, .choice .choice-btn .choice-place h5 {
+    position: relative;
+  }
+}
+
+.choice-restaurant {
+  position: absolute;
+  top: 505px;
+}
+@media (min-width: 1024px) {
+  .choice-restaurant {
+    position: static;
+  }
+}
+
+.choice-meal {
+  position: absolute;
+  top: 602.3px;
+}
+@media (min-width: 1024px) {
+  .choice-meal {
+    position: static;
+  }
+}
+
+.choice-place {
+  position: absolute;
+  top: 699.62px;
+}
+@media (min-width: 1024px) {
+  .choice-place {
+    position: static;
+  }
+}
+
+/* Partie lien vers les différentes pages des restaurants */
+.restaurants {
+  height: 1226px;
+  background-color: #f6f6f6;
+}
+@media (min-width: 1024px) {
+  .restaurants {
+    height: 668px;
+    padding: 30px 180px 30px 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.restaurants h2 {
+  padding-left: 20px;
+  position: absolute;
+  top: 894px;
+}
+@media (min-width: 1024px) {
+  .restaurants h2 {
+    position: static;
+    width: 268.72px;
+    height: 28px;
+    padding-left: 0px;
+  }
+}
+.restaurants .cards {
+  width: 340px;
+  position: absolute;
+  top: 942px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-left: 17px;
+}
+@media (min-width: 1024px) {
+  .restaurants .cards {
+    position: static;
+    width: 1080px;
+    height: 552px;
+    padding-left: 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.restaurants .cards .restaurant-link {
+  position: relative;
+  width: 100%;
+  height: 251px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 1024px) {
+  .restaurants .cards .restaurant-link {
+    position: relative;
+    width: 490px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.restaurants .cards .restaurant-link .card-img {
+  border-radius: 15px 15px 0px 0px;
+  height: 174px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+@media (min-width: 1024px) {
+  .restaurants .cards .restaurant-link .card-img {
+    position: relative;
+  }
+}
+.restaurants .cards .restaurant-link .card-img img {
+  border-radius: 15px 15px 0px 0px;
+  max-width: 100%;
+}
+.restaurants .cards .restaurant-link .card-img p {
+  background-color: #99E2D0;
+  color: #008766;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  position: absolute;
+  top: 13px;
+  left: 248px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .restaurants .cards .restaurant-link .card-img p {
+    left: 392.7px;
+  }
+}
+.restaurants .cards .restaurant-link h3 {
+  font-weight: 700;
+  width: 267px;
+  height: 20px;
+  position: absolute;
+  top: 190px;
+  left: 13px;
+}
+@media (min-width: 1024px) {
+  .restaurants .cards .restaurant-link h3 {
+    left: 18.74px;
+  }
+}
+.restaurants .cards .restaurant-link h4 {
+  width: 247px;
+  height: 24px;
+  position: absolute;
+  top: 215px;
+  left: 13px;
+}
+@media (min-width: 1024px) {
+  .restaurants .cards .restaurant-link h4 {
+    left: 18.74px;
+  }
+}
+.restaurants .cards .restaurant-link i {
+  width: 22px;
+  height: 21px;
+  position: absolute;
+  top: 197px;
+  left: 293px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .restaurants .cards .restaurant-link i {
+    left: 443px;
+  }
+}
+
+/* Partie informations - contact */
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 22px 25px 22px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer h1 {
+  width: 137.58px;
+  height: 27px;
+  font-size: 18px;
+  font-weight: 400;
+}
+footer .informations {
+  width: 190px;
+  height: 99px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+footer .informations .informations-icons {
+  width: 190px;
+  height: 19px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+}
+footer .informations .informations-icons i {
+  width: 11px;
+  height: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .informations .informations-icons h5 {
+  width: 168px;
+  height: 19px;
+}
+
+.informations > h5 {
+  width: 130px;
+  height: 20px;
+  font-weight: 400;
+}/*# sourceMappingURL=style.css.map */

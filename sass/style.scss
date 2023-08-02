@@ -1,0 +1,485 @@
+/* Breakpoint pour media queries */
+
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;
+
+/* Partie couleur - général */
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA ;
+$tertiary-color: #99E2D0;
+
+/* Partie couleur de fond */
+
+$first-background-color: #ffffff;
+$second-background-color: #353535;
+$third-background-color: #f6f6f6;
+$fourth-background-color: #eaeaea;
+
+/* Partie style du texte */
+
+$primary-font: 'Shrikhand';
+$secondary-font: 'Roboto';
+
+$first-text-color: black;
+$second-text-color:	#353535;
+$third-text-color: white;
+$new-text-color: #008766;
+
+h1, h2, h3, h4, h5, p {
+    margin: 0px;
+}
+
+h1 {
+    font-family: $primary-font;
+    font-style: italic;
+}
+
+h2, h3, h4, h5 {
+    font-family: $secondary-font;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Partie body - main - général */
+
+body {
+    display: flex;
+    justify-content: center;
+
+}
+
+main {
+    width: 375px;
+    margin: 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-breakpoint) {
+        width: 1440px;
+    }
+}
+
+/* Partie logo - marque */
+
+header h1 {
+    width: 100%;
+    height: 63px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: $tablet-breakpoint) {
+        height: 96px;
+    }
+}
+
+/* Partie localisation des restaurants les plus proches */
+
+.adress {
+    background-color: $fourth-background-color;
+    width: 100%;
+    height: 50px;
+    color: $second-text-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+
+}
+
+/* Partie exploration des restaurants du site */
+
+.explore {
+    width: 100%;
+    height: 287px;
+    background-color: $third-background-color;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $tablet-breakpoint) {
+        height: 238.62px;
+    }
+    
+    h2 {
+        width: 275px;
+        height: 68px;
+        position: absolute; 
+        top: 152px;
+
+        @media (min-width: $tablet-breakpoint) {
+            width: 645px;
+            height: 47px;
+            top: 176px;
+            font-size: 40px;
+        }
+    }
+
+    h3 {
+        font-weight: 300;
+        width: 315px;
+        height: 46px;
+        position: absolute; 
+        top: 220px;
+
+        @media (min-width: $tablet-breakpoint) {
+            width: 531px;
+            top: 241px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    h5 {
+        width: 218px;
+        height: 50px;
+        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        color: $third-text-color;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute; 
+        top: 293px;
+
+        @media (min-width: $tablet-breakpoint) {
+            top: 305px;
+        }
+    }
+}
+
+/* Partie choix du client en 3 étapes*/
+
+.choice {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    height: 440px;
+    display: flex;
+
+    @media (min-width: $tablet-breakpoint) {
+        height: 228.38px;
+        padding: 50px 180px 50px 180px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    h2 {
+        width: 275px;
+        height: 31px;
+        position: absolute; 
+        top: 448px;
+
+        @media (min-width: $tablet-breakpoint) {
+            position: static;
+        }
+    }
+
+    .choice-btn {
+
+        @media (min-width: $tablet-breakpoint) {
+            width: 1053px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .choice-restaurant, .choice-meal, .choice-place {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: $third-background-color;
+            width: 335px;
+            height: 72.38px;
+            border-radius: 20px;
+            margin-left: 12.51px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+            p {
+                width: 24px;
+                height: 24px;
+                position: absolute; 
+                left: -12px;
+                background-color: $primary-color;
+                color: $third-text-color;
+                border-radius: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media (min-width: $tablet-breakpoint) {
+                    position: relative;
+                }
+            }
+
+            i {
+                position: absolute; 
+                left: 35px;
+
+                @media (min-width: $tablet-breakpoint) {
+                    position: relative;
+                }
+            }
+
+            h5 {
+                position: absolute; 
+                left: 73.49px;
+
+                @media (min-width: $tablet-breakpoint) {
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+.choice-restaurant {
+    position: absolute; 
+    top: 505px;
+
+    @media (min-width: $tablet-breakpoint) {
+        position: static;
+    }
+}
+.choice-meal {
+    position: absolute; 
+    top: 602.3px;
+
+    @media (min-width: $tablet-breakpoint) {
+        position: static;
+    }
+}
+.choice-place {
+    position: absolute; 
+    top: 699.62px;
+
+    @media (min-width: $tablet-breakpoint) {
+        position: static;
+    }
+}
+
+/* Partie lien vers les différentes pages des restaurants */
+
+.restaurants {
+    height: 1226px;
+    background-color: $third-background-color;
+
+    @media (min-width: $tablet-breakpoint) {
+        height: 668px;
+        padding: 30px 180px 30px 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    h2 {
+        padding-left: 20px;
+        position: absolute; 
+        top: 894px;
+
+        @media (min-width: $tablet-breakpoint) {
+            position: static;
+            width: 268.72px;
+            height: 28px;
+            padding-left: 0px;
+        }
+    }
+
+    .cards{
+        width: 340px;
+        position: absolute; 
+        top: 942px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding-left: 17px;
+
+        @media (min-width: $tablet-breakpoint) {
+            position: static;
+            width: 1080px;
+            height: 552px;
+            padding-left: 0px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .restaurant-link {
+            position: relative;
+            width: 100%;
+            height: 251px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+            @media (min-width: $tablet-breakpoint) {
+                position: relative;
+                width: 490px;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .card-img {
+                border-radius: 15px 15px 0px 0px;
+                height: 174px;
+                overflow: hidden;
+                display: flex;
+                align-items: flex-end;
+
+                @media (min-width: $tablet-breakpoint) {
+                    position: relative;
+                }
+                
+                img {
+                    border-radius: 15px 15px 0px 0px;
+                    max-width: 100%;
+                }
+
+                p {
+                    background-color: $tertiary-color;
+                    color: $new-text-color;
+                    width: 80px;
+                    height: 29px;
+                    border-radius: 2px;
+                    position: absolute; 
+                    top: 13px;
+                    left: 248px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @media (min-width: $tablet-breakpoint) {
+                        left: 392.7px;
+                    }
+                }
+            }
+
+            h3 {
+                font-weight: 700;
+                width: 267px;
+                height: 20px;
+                position: absolute; 
+                top: 190px;
+                left: 13px;
+
+                @media (min-width: $tablet-breakpoint) {
+                    left: 18.74px;
+                }
+            }
+
+            h4 {
+                width: 247px;
+                height: 24px;
+                position: absolute; 
+                top: 215px;
+                left: 13px;
+
+                @media (min-width: $tablet-breakpoint) {
+                    left: 18.74px;
+                }
+            }
+
+            i {
+                width: 22px;
+                height: 21px;
+                position: absolute; 
+                top: 197px;
+                left: 293px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media (min-width: $tablet-breakpoint) {
+                    left: 443px;
+                }
+            }  
+        }
+    }
+}
+
+/* Partie informations - contact */
+
+footer {
+    background-color: $second-background-color;
+    color: $third-text-color;
+    padding: 22px 25px 22px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h1 {
+        width: 137.58px;
+        height: 27px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .informations {
+        width: 190px;
+        height: 99px;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        .informations-icons {
+            width: 190px;
+            height: 19px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 7px;
+
+            i {
+                width: 11px;
+                height: 13px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h5 {
+                width: 168px;
+                height: 19px;
+            }
+        }
+    }
+}
+
+.informations > h5 {
+    width: 130px;
+    height: 20px;
+    font-weight: 400; 
+}
+
+
+
+
+
+
+
+
+
