@@ -37,13 +37,13 @@ h5 {
 
 /* Partie body - main - général */
 body {
+  margin: 0px;
   display: flex;
   justify-content: center;
 }
 
 main {
   width: 375px;
-  margin: 0px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -150,6 +150,7 @@ header h1 {
   padding-right: 20px;
   width: 100%;
   height: 440px;
+  box-sizing: border-box;
   display: flex;
 }
 @media (min-width: 1024px) {
@@ -173,6 +174,9 @@ header h1 {
     position: static;
   }
 }
+.choice .choice-btn {
+  width: 100%;
+}
 @media (min-width: 1024px) {
   .choice .choice-btn {
     width: 1053px;
@@ -186,10 +190,10 @@ header h1 {
   flex-direction: row;
   align-items: center;
   background-color: #f6f6f6;
-  width: 335px;
+  width: 86.13%;
   height: 72.38px;
   border-radius: 20px;
-  margin-left: 12.51px;
+  margin-left: 12px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 .choice .choice-btn .choice-restaurant p, .choice .choice-btn .choice-meal p, .choice .choice-btn .choice-place p {
@@ -260,6 +264,7 @@ header h1 {
 
 /* Partie lien vers les différentes pages des restaurants */
 .restaurants {
+  width: 100%;
   height: 1226px;
   background-color: #f6f6f6;
 }
@@ -267,6 +272,7 @@ header h1 {
   .restaurants {
     height: 668px;
     padding: 30px 180px 30px 180px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -286,13 +292,15 @@ header h1 {
   }
 }
 .restaurants .cards {
-  width: 340px;
+  width: 100%;
   position: absolute;
   top: 942px;
   display: flex;
   flex-direction: column;
   gap: 18px;
   padding-left: 17px;
+  padding-right: 17px;
+  box-sizing: border-box;
 }
 @media (min-width: 1024px) {
   .restaurants .cards {
@@ -326,6 +334,7 @@ header h1 {
   overflow: hidden;
   display: flex;
   align-items: flex-end;
+  position: relative;
 }
 @media (min-width: 1024px) {
   .restaurants .cards .restaurant-link .card-img {
@@ -334,7 +343,10 @@ header h1 {
 }
 .restaurants .cards .restaurant-link .card-img img {
   border-radius: 15px 15px 0px 0px;
-  max-width: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 231px;
 }
 .restaurants .cards .restaurant-link .card-img p {
   background-color: #99E2D0;
@@ -344,7 +356,7 @@ header h1 {
   border-radius: 2px;
   position: absolute;
   top: 13px;
-  left: 248px;
+  right: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -384,7 +396,7 @@ header h1 {
   height: 21px;
   position: absolute;
   top: 197px;
-  left: 293px;
+  right: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -404,6 +416,13 @@ footer {
   flex-direction: column;
   gap: 16px;
 }
+@media (min-width: 1024px) {
+  footer {
+    height: 114px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+}
 footer h1 {
   width: 137.58px;
   height: 27px;
@@ -416,6 +435,13 @@ footer .informations {
   display: flex;
   flex-direction: column;
   gap: 7px;
+}
+@media (min-width: 1024px) {
+  footer .informations {
+    width: 661px;
+    height: 20px;
+    flex-direction: row;
+  }
 }
 footer .informations .informations-icons {
   width: 190px;
