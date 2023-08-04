@@ -68,6 +68,7 @@ body {
 
 main {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 
@@ -115,29 +116,25 @@ header h1 {
     background-color: $third-background-color;
     text-align: center;
     display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 113px;
+    flex-direction: column;
+    align-items: center;
 
     @media (min-width: $mobile-breakpoint) {
-        height: 238.62px;
-        top: 146px;
+        height: 179px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        justify-content: space-between;
     }
 
-    @media (min-width: $tablet-breakpoint) {
-        max-width: 1440px;
-    }
-    
     h2 {
         width: 275px;
         height: 68px;
-        position: absolute; 
-        top: 39px;
+        padding-top: 39px;
 
         @media (min-width: $mobile-breakpoint) {
             width: 645px;
             height: 47px;
-            top: 30px;
+            padding-top: 0px;
             font-size: 40px;
         }
     }
@@ -146,13 +143,14 @@ header h1 {
         font-weight: 300;
         width: 315px;
         height: 46px;
-        position: absolute; 
-        top: 107px;
+        padding-bottom: 27px;
 
         @media (min-width: $mobile-breakpoint) {
             width: 531px;
             top: 95px;
+            padding-bottom: 0px;
             display: flex;
+            justify-content: center;
             align-items: center;
         }
     }
@@ -167,12 +165,6 @@ header h1 {
         display: flex;
         justify-content: center;
         align-items: center;
-        position: absolute; 
-        top: 180px;
-
-        @media (min-width: $mobile-breakpoint) {
-            top: 159px;
-        }
     }
 }
 
@@ -180,48 +172,46 @@ header h1 {
 
 .choice {
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 32px;
     width: 100%;
     height: 440px;
     box-sizing: border-box;
     display: flex;
-    position: absolute;
-    top: 400px;
+    flex-direction: column;
 
     @media (min-width: $tablet-breakpoint) {
-        max-width: 1440px;
         height: 228.38px;
         padding: 50px 12.5% 50px 12.5%;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        top: 375px;
-    }
-
-    @media (min-width: 1440px) {
-        padding: 50px 180px 50px 180px;
     }
 
     h2 {
         width: 275px;
         height: 31px;
-        position: absolute; 
-        top: 48px;
+        padding-top: 48px;
+        padding-bottom: 26px;
 
         @media (min-width: $tablet-breakpoint) {
-            position: static;
+            padding: 0px;
         }
     }
 
         .choice-btn {
             width: 100%;
+            height: 267px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
         @media (min-width: $tablet-breakpoint) {
+            height: 72.38px;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            gap: 10px;;
+            gap: 2.28%;
         }
         
         .choice-restaurant, .choice-meal, .choice-place {
@@ -229,21 +219,22 @@ header h1 {
             flex-direction: row;
             align-items: center;
             background-color: $third-background-color;
-            width: 86.13%;
+            width: 100%;
             height: 72.38px;
             border-radius: 20px;
             margin-left: 12px;
+            box-sizing: border-box;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 
             @media (min-width: $tablet-breakpoint) {
-                width: 33%;
+                width: 33.3%;
             }
 
             p {
                 width: 24px;
                 height: 24px;
                 position: absolute; 
-                left: -12px;
+                left: 20px;
                 background-color: $primary-color;
                 color: $third-text-color;
                 border-radius: 25px;
@@ -253,54 +244,34 @@ header h1 {
 
                 @media (min-width: $tablet-breakpoint) {
                     position: relative;
+                    left: -12px;
                 }
             }
 
             i {
-                position: absolute; 
-                left: 35px;
+                padding-left: 35px;
 
                 @media (min-width: $tablet-breakpoint) {
-                    position: relative;
-                    left: 1%;
+                    padding-left: 0px;
+                }
+
+                @media (min-width: 1300px) {
+                    padding-left: 22px;
                 }
             }
 
             h5 {
-                position: absolute; 
-                left: 73.49px;
+                padding-left: 21px;
 
                 @media (min-width: $tablet-breakpoint) {
-                    position: relative;
-                    left: 5%;
+                    padding-left: 8px;
+                }
+
+                @media (min-width: 1300px) {
+                    padding-left: 28px;
                 }
             }
         }
-    }
-}
-
-.choice-restaurant {
-    position: absolute; 
-    top: 105px;
-
-    @media (min-width: $tablet-breakpoint) {
-        position: static;
-    }
-}
-.choice-meal {
-    position: absolute; 
-    top: 202.3px;
-
-    @media (min-width: $tablet-breakpoint) {
-        position: static;
-    }
-}
-.choice-place {
-    position: absolute; 
-    top: 299.62px;
-
-    @media (min-width: $tablet-breakpoint) {
-        position: static;
     }
 }
 
@@ -310,8 +281,11 @@ header h1 {
     width: 100%;
     height: 1226px;
     background-color: $third-background-color;
-    position: absolute;
-    top: 840px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 
     @media (min-width: $mobile-breakpoint) {
         height: 668px;
@@ -322,47 +296,31 @@ header h1 {
         justify-content: space-between;
     }
 
-    @media (min-width: $tablet-breakpoint) {
-            max-width: 1440px;
-            top: 603.38px;
-    }
-
-    @media (min-width: 1440px) {
-            padding: 30px 180px 30px 180px;
-    }
-
     h2 {
-        padding-left: 20px;
-        position: absolute; 
-        top: 54px;
-
+        padding-top: 54px;
+        padding-bottom: 24px;
+        
         @media (min-width: $mobile-breakpoint) {
-            position: static;
             width: 268.72px;
             height: 28px;
-            padding-left: 0px;
+            padding: 0px;
         }
     }
 
     .cards{
         width: 100%;
-        position: absolute; 
-        top: 102px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 18px;
-        padding-left: 17px;
-        padding-right: 17px;
-        box-sizing: border-box;
 
         @media (min-width: $mobile-breakpoint) {
-            position: static;
             height: 552px;
             padding: 0px;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
+            align-items: center;
         }
 
         .restaurant-link {
@@ -375,10 +333,7 @@ header h1 {
             position: relative;
 
             @media (min-width: $mobile-breakpoint) {
-                position: relative;
-                width: 45.3%;
-                display: flex;
-                flex-direction: column;
+                width: 45.37%;
             }
             
             .card-img {
@@ -387,11 +342,6 @@ header h1 {
                 overflow: hidden;
                 display: flex;
                 align-items: flex-end;
-                position: relative;
-
-                @media (min-width: $mobile-breakpoint) {
-                    position: relative;
-                }
                 
                 img {
                     border-radius: 15px 15px 0px 0px;
@@ -459,6 +409,7 @@ header h1 {
 
 footer {
     width: 100%;
+    height: 186px;
     background-color: $second-background-color;
     color: $third-text-color;
     padding: 22px 25px 22px 25px;
@@ -466,12 +417,6 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    position: absolute;
-    top: 2066px;
-
-    @media (min-width: $mobile-breakpoint) {
-        top: 1502.61px;
-    }
 
     @media (min-width: $tablet-breakpoint) {
         max-width: 1440px;

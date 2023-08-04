@@ -44,6 +44,7 @@ body {
 
 main {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -88,32 +89,27 @@ header h1 {
   background-color: #f6f6f6;
   text-align: center;
   display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 113px;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .explore {
-    height: 238.62px;
-    top: 146px;
-  }
-}
-@media (min-width: 1024px) {
-  .explore {
-    max-width: 1440px;
+    height: 179px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: space-between;
   }
 }
 .explore h2 {
   width: 275px;
   height: 68px;
-  position: absolute;
-  top: 39px;
+  padding-top: 39px;
 }
 @media (min-width: 768px) {
   .explore h2 {
     width: 645px;
     height: 47px;
-    top: 30px;
+    padding-top: 0px;
     font-size: 40px;
   }
 }
@@ -121,14 +117,15 @@ header h1 {
   font-weight: 300;
   width: 315px;
   height: 46px;
-  position: absolute;
-  top: 107px;
+  padding-bottom: 27px;
 }
 @media (min-width: 768px) {
   .explore h3 {
     width: 531px;
     top: 95px;
+    padding-bottom: 0px;
     display: flex;
+    justify-content: center;
     align-items: center;
   }
 }
@@ -142,63 +139,53 @@ header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 180px;
-}
-@media (min-width: 768px) {
-  .explore h5 {
-    top: 159px;
-  }
 }
 
 /* Partie choix du client en 3 étapes*/
 .choice {
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 32px;
   width: 100%;
   height: 440px;
   box-sizing: border-box;
   display: flex;
-  position: absolute;
-  top: 400px;
+  flex-direction: column;
 }
 @media (min-width: 1024px) {
   .choice {
-    max-width: 1440px;
     height: 228.38px;
     padding: 50px 12.5% 50px 12.5%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    top: 375px;
-  }
-}
-@media (min-width: 1440px) {
-  .choice {
-    padding: 50px 180px 50px 180px;
   }
 }
 .choice h2 {
   width: 275px;
   height: 31px;
-  position: absolute;
-  top: 48px;
+  padding-top: 48px;
+  padding-bottom: 26px;
 }
 @media (min-width: 1024px) {
   .choice h2 {
-    position: static;
+    padding: 0px;
   }
 }
 .choice .choice-btn {
   width: 100%;
+  height: 267px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media (min-width: 1024px) {
   .choice .choice-btn {
+    height: 72.38px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 10px;
+    gap: 2.28%;
   }
 }
 .choice .choice-btn .choice-restaurant, .choice .choice-btn .choice-meal, .choice .choice-btn .choice-place {
@@ -206,22 +193,23 @@ header h1 {
   flex-direction: row;
   align-items: center;
   background-color: #f6f6f6;
-  width: 86.13%;
+  width: 100%;
   height: 72.38px;
   border-radius: 20px;
   margin-left: 12px;
+  box-sizing: border-box;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 @media (min-width: 1024px) {
   .choice .choice-btn .choice-restaurant, .choice .choice-btn .choice-meal, .choice .choice-btn .choice-place {
-    width: 33%;
+    width: 33.3%;
   }
 }
 .choice .choice-btn .choice-restaurant p, .choice .choice-btn .choice-meal p, .choice .choice-btn .choice-place p {
   width: 24px;
   height: 24px;
   position: absolute;
-  left: -12px;
+  left: 20px;
   background-color: #9356DC;
   color: white;
   border-radius: 25px;
@@ -232,56 +220,33 @@ header h1 {
 @media (min-width: 1024px) {
   .choice .choice-btn .choice-restaurant p, .choice .choice-btn .choice-meal p, .choice .choice-btn .choice-place p {
     position: relative;
+    left: -12px;
   }
 }
 .choice .choice-btn .choice-restaurant i, .choice .choice-btn .choice-meal i, .choice .choice-btn .choice-place i {
-  position: absolute;
-  left: 35px;
+  padding-left: 35px;
 }
 @media (min-width: 1024px) {
   .choice .choice-btn .choice-restaurant i, .choice .choice-btn .choice-meal i, .choice .choice-btn .choice-place i {
-    position: relative;
-    left: 1%;
+    padding-left: 0px;
+  }
+}
+@media (min-width: 1300px) {
+  .choice .choice-btn .choice-restaurant i, .choice .choice-btn .choice-meal i, .choice .choice-btn .choice-place i {
+    padding-left: 22px;
   }
 }
 .choice .choice-btn .choice-restaurant h5, .choice .choice-btn .choice-meal h5, .choice .choice-btn .choice-place h5 {
-  position: absolute;
-  left: 73.49px;
+  padding-left: 21px;
 }
 @media (min-width: 1024px) {
   .choice .choice-btn .choice-restaurant h5, .choice .choice-btn .choice-meal h5, .choice .choice-btn .choice-place h5 {
-    position: relative;
-    left: 5%;
+    padding-left: 8px;
   }
 }
-
-.choice-restaurant {
-  position: absolute;
-  top: 105px;
-}
-@media (min-width: 1024px) {
-  .choice-restaurant {
-    position: static;
-  }
-}
-
-.choice-meal {
-  position: absolute;
-  top: 202.3px;
-}
-@media (min-width: 1024px) {
-  .choice-meal {
-    position: static;
-  }
-}
-
-.choice-place {
-  position: absolute;
-  top: 299.62px;
-}
-@media (min-width: 1024px) {
-  .choice-place {
-    position: static;
+@media (min-width: 1300px) {
+  .choice .choice-btn .choice-restaurant h5, .choice .choice-btn .choice-meal h5, .choice .choice-btn .choice-place h5 {
+    padding-left: 28px;
   }
 }
 
@@ -290,8 +255,11 @@ header h1 {
   width: 100%;
   height: 1226px;
   background-color: #f6f6f6;
-  position: absolute;
-  top: 840px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
   .restaurants {
@@ -303,50 +271,32 @@ header h1 {
     justify-content: space-between;
   }
 }
-@media (min-width: 1024px) {
-  .restaurants {
-    max-width: 1440px;
-    top: 603.38px;
-  }
-}
-@media (min-width: 1440px) {
-  .restaurants {
-    padding: 30px 180px 30px 180px;
-  }
-}
 .restaurants h2 {
-  padding-left: 20px;
-  position: absolute;
-  top: 54px;
+  padding-top: 54px;
+  padding-bottom: 24px;
 }
 @media (min-width: 768px) {
   .restaurants h2 {
-    position: static;
     width: 268.72px;
     height: 28px;
-    padding-left: 0px;
+    padding: 0px;
   }
 }
 .restaurants .cards {
   width: 100%;
-  position: absolute;
-  top: 102px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 18px;
-  padding-left: 17px;
-  padding-right: 17px;
-  box-sizing: border-box;
 }
 @media (min-width: 768px) {
   .restaurants .cards {
-    position: static;
     height: 552px;
     padding: 0px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
   }
 }
 .restaurants .cards .restaurant-link {
@@ -360,10 +310,7 @@ header h1 {
 }
 @media (min-width: 768px) {
   .restaurants .cards .restaurant-link {
-    position: relative;
-    width: 45.3%;
-    display: flex;
-    flex-direction: column;
+    width: 45.37%;
   }
 }
 .restaurants .cards .restaurant-link .card-img {
@@ -372,12 +319,6 @@ header h1 {
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  position: relative;
-}
-@media (min-width: 768px) {
-  .restaurants .cards .restaurant-link .card-img {
-    position: relative;
-  }
 }
 .restaurants .cards .restaurant-link .card-img img {
   border-radius: 15px 15px 0px 0px;
@@ -438,6 +379,7 @@ header h1 {
 /* Partie informations - contact */
 footer {
   width: 100%;
+  height: 186px;
   background-color: #353535;
   color: white;
   padding: 22px 25px 22px 25px;
@@ -445,13 +387,6 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  position: absolute;
-  top: 2066px;
-}
-@media (min-width: 768px) {
-  footer {
-    top: 1502.61px;
-  }
 }
 @media (min-width: 1024px) {
   footer {
