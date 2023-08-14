@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/* Breakpoint pour media queries */
+/* Partie couleur - général */
+/* Partie couleur de fond */
+/* Partie style du texte */
+h1, h2, h3, h4, h5, p {
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Shrikhand";
+  font-style: italic;
+}
+
+h2, h3, h4, h5 {
+  font-family: "Roboto";
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}/*# sourceMappingURL=variables.css.map */

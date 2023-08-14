@@ -35,6 +35,11 @@ h5 {
   font-weight: 500;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Partie body - main - général */
 body {
   margin: 0px;
@@ -128,9 +133,6 @@ header h1 {
     justify-content: center;
     align-items: center;
   }
-}
-.explore a {
-  text-decoration: none;
 }
 .explore h5 {
   width: 218px;
@@ -309,7 +311,6 @@ header h1 {
   }
 }
 .restaurants .cards .restaurant-link {
-  color: inherit;
   width: 100%;
   height: 251px;
   border-radius: 15px;
@@ -474,219 +475,4 @@ footer .informations .informations-icons h5 {
   width: 130px;
   height: 20px;
   font-weight: 400;
-}
-
-/* Partie body - main - général */
-body {
-  margin: 0px;
-  display: flex;
-  justify-content: center;
-}
-
-main {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-@media (min-width: 1024px) {
-  main {
-    max-width: 1440px;
-  }
-}
-
-/* Partie logo - marque */
-header {
-  display: flex;
-  align-items: center;
-}
-header .return {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  left: 17px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header h1 {
-  width: 100%;
-  height: 63px;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media (min-width: 768px) {
-  header h1 {
-    height: 96px;
-  }
-}
-
-/* Partie image */
-.image {
-  width: 100%;
-  height: 275px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-/* Partie menu */
-.menu {
-  width: 100%;
-  border-radius: 40px 40px 0px 0px;
-  background-color: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  padding: 32px 13px 40px 13px;
-  margin-top: -32px;
-  box-sizing: border-box;
-}
-.menu .restaurant-name {
-  width: 341px;
-  height: 29px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 8px;
-}
-.menu .restaurant-name h1 {
-  width: 100%;
-  height: 27px;
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-}
-.menu .restaurant-name i {
-  width: 21px;
-  height: 22px;
-  margin-right: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu .menu-part {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 12px;
-}
-.menu .menu-part h5 {
-  width: 275px;
-  height: 27px;
-  position: relative;
-}
-.menu .menu-part h5::before {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  width: 40px;
-  border-bottom: #99E2D0 solid 3px;
-}
-.menu .menu-part .dish-name {
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.menu .menu-part .dish-name .dish-txt {
-  width: 287px;
-  height: 42px;
-  padding: 15px 0px 15px 15px;
-}
-.menu .menu-part .dish-name .dish-price {
-  width: 59px;
-  height: 69px;
-  padding: 15px 15px 15px 0px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.menu > h5 {
-  width: 186px;
-  height: 50px;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  color: white;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Partie informations - contact */
-footer {
-  width: 100%;
-  height: 186px;
-  background-color: #353535;
-  color: white;
-  padding: 22px 25px 22px 25px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-@media (min-width: 1024px) {
-  footer {
-    max-width: 1440px;
-    height: 114px;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    top: 1261.38px;
-  }
-}
-footer h1 {
-  width: 137.58px;
-  height: 27px;
-  font-size: 18px;
-  font-weight: 400;
-}
-footer .informations {
-  width: 190px;
-  height: 99px;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-@media (min-width: 1024px) {
-  footer .informations {
-    width: 661px;
-    height: 20px;
-    flex-direction: row;
-  }
-}
-footer .informations .informations-icons {
-  width: 190px;
-  height: 19px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 7px;
-}
-footer .informations .informations-icons i {
-  width: 11px;
-  height: 13px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-footer .informations .informations-icons h5 {
-  width: 168px;
-  height: 19px;
-}
-
-.informations > h5 {
-  width: 130px;
-  height: 20px;
-  font-weight: 400;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=welcome.css.map */

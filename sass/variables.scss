@@ -1,0 +1,64 @@
+/* Breakpoint pour media queries */
+
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;
+
+/* Partie couleur - général */
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA ;
+$tertiary-color: #99E2D0;
+
+/* Partie couleur de fond */
+
+$first-background-color: #ffffff;
+$second-background-color: #353535;
+$third-background-color: #f6f6f6;
+$fourth-background-color: #eaeaea;
+
+/* Partie style du texte */
+
+$primary-font: 'Shrikhand';
+$secondary-font: 'Roboto';
+
+$first-text-color: black;
+$second-text-color:	#353535;
+$third-text-color: white;
+$new-text-color: #008766;
+
+h1, h2, h3, h4, h5, p {
+    margin: 0px;
+}
+
+h1 {
+    font-family: $primary-font;
+    font-style: italic;
+}
+
+h2, h3, h4, h5 {
+    font-family: $secondary-font;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
