@@ -1,0 +1,48 @@
+@mixin loader {
+    
+    .loader {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: $first-background-color;
+        opacity: 0.8;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: loader-departure 0.5s ease 3s forwards;
+    
+        .ustensil {
+            width: 100px;
+            height: 100px;
+            border: transparent solid 20px;
+            border: $fourth-background-color solid 20px;
+            border-right: $third-background-color solid 20px;
+            border-left: $third-background-color solid 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to bottom right, $secondary-color, $primary-color);
+            animation: loader-circle 1s infinite;
+        }
+    }
+    
+    @keyframes loader-departure {
+        
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
+    @keyframes loader-circle {
+        
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
