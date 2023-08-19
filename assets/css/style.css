@@ -10,9 +10,10 @@ h1, h2, h3, h4, h5, p {
 h1 {
   font-family: "Shrikhand";
   font-style: italic;
+  font-weight: 400;
 }
 
-h2, h3, h4, h5 {
+h2, h3, h4, h5, p {
   font-family: "Roboto";
 }
 
@@ -40,23 +41,63 @@ a {
   color: inherit;
 }
 
+/* loader de la page d'acceuil */
+/* Header des différentes pages */
+/* Footer des différentes pages */
+/* Boutons d'exploration ou de commande des différentes pages */
+/* Coeur vide */
+/* Coeur plein */
+/* Validation des plats sur le menu */
 /* Partie body - main - général */
 body {
   margin: 0px;
   display: flex;
   justify-content: center;
-  position: relative;
 }
 
 .loader {
   position: fixed;
-  top: 0;
   width: 100%;
   height: 100%;
   background-color: #ffffff;
   opacity: 0.8;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: loader-departure 0.5s ease 3s forwards;
+}
+.loader .ustensil {
+  width: 100px;
+  height: 100px;
+  border: transparent solid 20px;
+  border: #eaeaea solid 20px;
+  border-right: #f6f6f6 solid 20px;
+  border-left: #f6f6f6 solid 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  animation: loader-circle 1s infinite;
 }
 
+@keyframes loader-departure {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes loader-circle {
+  to {
+    transform: rotate(360deg);
+  }
+}
 main {
   width: 100%;
   height: 100%;
@@ -70,6 +111,12 @@ main {
 }
 
 /* Partie logo - marque */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 header h1 {
   width: 100%;
   height: 63px;
@@ -106,6 +153,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* animation de l'arrivée progressive des parties du menuBouton explorer */
 }
 @media (min-width: 768px) {
   .explore {
@@ -229,6 +277,8 @@ header h1 {
 .choice .choice-btn .choice-restaurant p, .choice .choice-btn .choice-meal p, .choice .choice-btn .choice-place p {
   width: 24px;
   height: 24px;
+  font-size: 14.18px;
+  font-weight: 500;
   position: absolute;
   left: 20px;
   background-color: #9356DC;
@@ -281,6 +331,7 @@ header h1 {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  /* Ensemble des différents restaurants */
 }
 @media (min-width: 768px) {
   .restaurants {
@@ -309,6 +360,7 @@ header h1 {
   flex-direction: column;
   justify-content: space-between;
   gap: 18px;
+  /* Carte et lien d'un restaurant unique */
 }
 @media (min-width: 768px) {
   .restaurants .cards {
@@ -328,6 +380,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   position: relative;
+  /* Coeur de la carte */
 }
 @media (min-width: 768px) {
   .restaurants .cards .restaurant-link {
@@ -349,6 +402,8 @@ header h1 {
   max-height: 231px;
 }
 .restaurants .cards .restaurant-link .card-img p {
+  font-size: 14px;
+  font-weight: 500;
   background-color: #99E2D0;
   color: #008766;
   width: 80px;
@@ -389,22 +444,16 @@ header h1 {
 .restaurants .cards .restaurant-link .fa-regular {
   width: 25px;
   height: 22px;
-  position: absolute;
-  top: 197px;
-  right: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.restaurants .cards .restaurant-link .fa-regular:hover {
-  display: none;
+  position: absolute;
+  top: 197px;
+  right: 26px;
 }
 .restaurants .cards .restaurant-link .fa-solid {
   width: 25px;
   height: 22px;
-  position: absolute;
-  top: 197px;
-  right: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -414,9 +463,15 @@ header h1 {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   opacity: 0;
   transition: all 0.3s;
+  position: absolute;
+  top: 197px;
+  right: 26px;
 }
-.restaurants .cards .restaurant-link .fa-solid:hover {
+.restaurants .cards .restaurant-link .fa-solid:active {
   opacity: 1;
+}
+.restaurants .cards .restaurant-link .fa-solid:active .fa-regular {
+  display: none;
 }
 
 /* Partie informations - contact */
@@ -498,9 +553,10 @@ h1, h2, h3, h4, h5, p {
 h1 {
   font-family: "Shrikhand";
   font-style: italic;
+  font-weight: 400;
 }
 
-h2, h3, h4, h5 {
+h2, h3, h4, h5, p {
   font-family: "Roboto";
 }
 
@@ -528,6 +584,13 @@ a {
   color: inherit;
 }
 
+/* loader de la page d'acceuil */
+/* Header des différentes pages */
+/* Footer des différentes pages */
+/* Boutons d'exploration ou de commande des différentes pages */
+/* Coeur vide */
+/* Coeur plein */
+/* Validation des plats sur le menu */
 /* Partie body - main - général */
 body {
   margin: 0px;
@@ -540,6 +603,7 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: relative;
 }
 @media (min-width: 1024px) {
@@ -550,14 +614,7 @@ main {
 
 /* Partie logo - marque */
 header {
-  display: flex;
-  align-items: center;
-}
-header .return {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  left: 17px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -574,6 +631,16 @@ header h1 {
   header h1 {
     height: 96px;
   }
+}
+
+header .return {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Partie image */
@@ -597,9 +664,15 @@ header h1 {
   padding: 32px 13px 40px 13px;
   margin-top: -32px;
   box-sizing: border-box;
+  /* Titre du restaurant avec son coeur */
+}
+@media (min-width: 1072px) {
+  .menu {
+    width: 1055px;
+  }
 }
 .menu .restaurant-name {
-  width: 341px;
+  width: 307px;
   height: 29px;
   box-sizing: border-box;
   display: flex;
@@ -618,22 +691,16 @@ header h1 {
 .menu .restaurant-name .fa-regular {
   width: 25px;
   height: 22px;
-  position: absolute;
-  top: 11px;
-  right: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.menu .restaurant-name .fa-regular:hover {
-  display: none;
+  position: absolute;
+  top: 11px;
+  right: 0px;
 }
 .menu .restaurant-name .fa-solid {
   width: 25px;
   height: 22px;
-  position: absolute;
-  top: 11px;
-  right: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -643,9 +710,15 @@ header h1 {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   opacity: 0;
   transition: all 0.3s;
+  position: absolute;
+  top: 11px;
+  right: 0px;
 }
-.menu .restaurant-name .fa-solid:hover {
+.menu .restaurant-name .fa-solid:active {
   opacity: 1;
+}
+.menu .restaurant-name .fa-solid:active .fa-regular {
+  display: none;
 }
 
 .menu-part {
@@ -654,16 +727,20 @@ header h1 {
   flex-direction: column;
   justify-content: space-between;
   gap: 12px;
+  animation: menu 3s forwards;
+  /* Titres entrées, plats, desserts */
+  /* Plat du menu avec son animation checking */
 }
 .menu-part h5 {
   width: 275px;
   height: 27px;
+  font-weight: 300;
   position: relative;
 }
 .menu-part h5::before {
   content: "";
   position: absolute;
-  bottom: -3px;
+  bottom: 0px;
   width: 40px;
   border-bottom: #99E2D0 solid 3px;
 }
@@ -676,34 +753,29 @@ header h1 {
   position: relative;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
+  /* Description du plat */
 }
 .menu-part .dish:active .check, .menu-part .dish:active .dish-price {
-  animation: "checking" 0.5s forwards;
+  animation: checking 0.5s forwards;
 }
-.menu-part .dish:active .dish-name {
-  border-radius: 15px 0px 0px 15px;
+.menu-part .dish:not(:active) .check, .menu-part .dish:not(:active) .dish-price {
+  animation: reverse-checking 0.5s forwards;
 }
-.menu-part .dish .dish-name {
-  width: 100%;
-  height: 69px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+@keyframes checking {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-59px);
+  }
 }
-.menu-part .dish .dish-name .dish-txt {
-  width: 0px;
-  height: 42px;
-  padding: 15px 0px 15px 15px;
-  white-space: nowrap;
-}
-.menu-part .dish .dish-name .dish-price {
-  width: 59px;
-  height: 69px;
-  padding: 15px 15px 15px 0px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+@keyframes reverse-checking {
+  from {
+    transform: translateX(-59px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 .menu-part .dish .check {
   position: absolute;
@@ -717,26 +789,82 @@ header h1 {
   border-radius: 0px 15px 15px 0px;
   color: white;
 }
+.menu-part .dish .dish-name {
+  width: 100%;
+  height: 69px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 59px;
+  /* Prix du plat */
+}
+.menu-part .dish .dish-name .dish-txt {
+  width: 100%;
+  height: 42px;
+  padding: 15px 0px 15px 15px;
+  overflow: hidden;
+}
+.menu-part .dish .dish-name .dish-txt h3, .menu-part .dish .dish-name .dish-txt p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-part .dish .dish-name .dish-txt h3 {
+  font-weight: 500;
+}
+.menu-part .dish .dish-name .dish-txt p {
+  font-size: 15px;
+  font-weight: 300;
+}
+.menu-part .dish .dish-name .dish-price {
+  width: 59px;
+  height: 69px;
+  padding: 15px 15px 15px 0px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.menu-part .dish .dish-name .dish-price p {
+  font-size: 15.04px;
+  font-weight: 700;
+}
 
-@keyframes checking {
+/* animation de l'arrivée progressive des parties du menu */
+#article1 {
+  animation: menu 1s ease-in;
+}
+
+#article2 {
+  animation: menu 1s ease-in 1s backwards;
+}
+
+#article3 {
+  animation: menu 1s ease-in 2s backwards;
+}
+
+@keyframes menu {
   from {
-    transform: translateX(0);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: translateX(-59px);
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
+/* Bouton commande */
 a > h5 {
   width: 186px;
   height: 50px;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   color: white;
-  border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   opacity: 1;
+  border-radius: 25px;
   transition: all 0.3s ease;
 }
 a > h5:hover {

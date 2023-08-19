@@ -10,9 +10,10 @@ h1, h2, h3, h4, h5, p {
 h1 {
   font-family: "Shrikhand";
   font-style: italic;
+  font-weight: 400;
 }
 
-h2, h3, h4, h5 {
+h2, h3, h4, h5, p {
   font-family: "Roboto";
 }
 
@@ -40,6 +41,13 @@ a {
   color: inherit;
 }
 
+/* loader de la page d'acceuil */
+/* Header des différentes pages */
+/* Footer des différentes pages */
+/* Boutons d'exploration ou de commande des différentes pages */
+/* Coeur vide */
+/* Coeur plein */
+/* Validation des plats sur le menu */
 /* Partie body - main - général */
 body {
   margin: 0px;
@@ -103,6 +111,12 @@ main {
 }
 
 /* Partie logo - marque */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 header h1 {
   width: 100%;
   height: 63px;
@@ -139,6 +153,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* animation de l'arrivée progressive des parties du menuBouton explorer */
 }
 @media (min-width: 768px) {
   .explore {
@@ -262,6 +277,8 @@ header h1 {
 .choice .choice-btn .choice-restaurant p, .choice .choice-btn .choice-meal p, .choice .choice-btn .choice-place p {
   width: 24px;
   height: 24px;
+  font-size: 14.18px;
+  font-weight: 500;
   position: absolute;
   left: 20px;
   background-color: #9356DC;
@@ -314,6 +331,7 @@ header h1 {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  /* Ensemble des différents restaurants */
 }
 @media (min-width: 768px) {
   .restaurants {
@@ -342,6 +360,7 @@ header h1 {
   flex-direction: column;
   justify-content: space-between;
   gap: 18px;
+  /* Carte et lien d'un restaurant unique */
 }
 @media (min-width: 768px) {
   .restaurants .cards {
@@ -361,6 +380,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   position: relative;
+  /* Coeur de la carte */
 }
 @media (min-width: 768px) {
   .restaurants .cards .restaurant-link {
@@ -382,6 +402,8 @@ header h1 {
   max-height: 231px;
 }
 .restaurants .cards .restaurant-link .card-img p {
+  font-size: 14px;
+  font-weight: 500;
   background-color: #99E2D0;
   color: #008766;
   width: 80px;
@@ -422,19 +444,16 @@ header h1 {
 .restaurants .cards .restaurant-link .fa-regular {
   width: 25px;
   height: 22px;
-  position: absolute;
-  top: 197px;
-  right: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 197px;
+  right: 26px;
 }
 .restaurants .cards .restaurant-link .fa-solid {
   width: 25px;
   height: 22px;
-  position: absolute;
-  top: 197px;
-  right: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -444,11 +463,14 @@ header h1 {
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   opacity: 0;
   transition: all 0.3s;
+  position: absolute;
+  top: 197px;
+  right: 26px;
 }
-.restaurants .cards .restaurant-link .fa-solid:hover {
+.restaurants .cards .restaurant-link .fa-solid:active {
   opacity: 1;
 }
-.restaurants .cards .restaurant-link .fa-solid:hover .fa-regular {
+.restaurants .cards .restaurant-link .fa-solid:active .fa-regular {
   display: none;
 }
 

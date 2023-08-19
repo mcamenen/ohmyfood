@@ -1,0 +1,268 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+/* Partie body - main - général */
+
+body {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @media (min-width: $tablet-breakpoint) {
+        max-width: 1440px;
+    }
+}
+
+/* Partie logo - marque */
+
+@include header;
+    
+    header .return {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+/* Partie image */
+
+.image {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+}
+
+/* Partie menu */
+
+.menu {
+    width: 100%;
+    border-radius: 40px 40px 0px 0px;
+    background-color: $third-background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 32px 13px 40px 13px;
+    margin-top: -32px;
+    box-sizing: border-box;
+
+    @media (min-width: 1072px) {
+        width: 1055px;
+        }
+
+/* Titre du restaurant avec son coeur */
+
+    .restaurant-name {
+        width: 307px;
+        height: 29px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 8px;
+        position: relative;
+
+        h1 {
+            width: 100%;
+            height: 27px;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .fa-regular {
+            @include regular-heart;
+            position: absolute; 
+            top: 11px;
+            right: 0px;
+        } 
+        
+        .fa-solid {
+            @include solid-heart;
+            position: absolute; 
+            top: 11px;
+            right: 0px;
+        }
+    }
+}
+
+    .menu-part {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 12px;
+        animation: menu 3s forwards;
+
+/* Titres entrées, plats, desserts */
+
+        h5 {
+            width: 275px;
+            height: 27px;
+            font-weight: 300;
+            position: relative;
+        }
+
+        h5::before {
+            content: "";
+            position: absolute;
+            bottom: 0px; 
+            width: 40px;
+            border-bottom: $tertiary-color solid 3px;
+        }
+
+/* Plat du menu avec son animation checking */
+
+        .dish {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+            background-color: $first-background-color;
+            
+
+            &:active {
+                .check, .dish-price {
+                    animation: checking 0.5s forwards;
+                }
+            }
+
+            &:not(:active) {
+                .check, .dish-price {
+                    animation: reverse-checking 0.5s forwards;
+                }
+                
+            }
+
+            @keyframes checking {
+
+                from {  transform: translateX(0);
+                }
+            
+                to {    transform: translateX(-59px);
+                }
+                
+            }
+            
+            @keyframes reverse-checking {
+            
+                from {  transform: translateX(-59px);
+                }
+            
+                to {    transform: translateX(0);
+                }
+                
+            }
+
+            .check {
+                @include check-dishes;            
+            }
+
+/* Description du plat */
+
+        .dish-name {
+            width: 100%;
+            height: 69px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 59px;
+
+            .dish-txt {
+                width: 100%;
+                height: 42px;
+                padding: 15px 0px 15px 15px;
+                overflow: hidden;
+
+                h3, p {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                
+                h3 {
+                    font-weight: 500;
+                }
+
+                p {
+                    font-size: 15px;
+                    font-weight: 300;
+                }
+                
+            }
+
+/* Prix du plat */
+
+            .dish-price {
+                width: 59px;
+                height: 69px;
+                padding: 15px 15px 15px 0px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                p {
+                    font-size: 15.04px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        }
+        
+    }
+
+/* animation de l'arrivée progressive des parties du menu */
+
+#article1 {
+    animation: menu 1s ease-in;
+}
+#article2 {
+    animation: menu 1s ease-in 1s backwards;
+}
+#article3 {
+    animation: menu 1s ease-in 2s backwards;
+}
+
+@keyframes menu {
+    
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
+    to { 
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Bouton commande */
+
+a > h5 {
+        width: 186px;
+        @include button;
+    }
+
+/* Partie informations - contact */
+
+@include footer;

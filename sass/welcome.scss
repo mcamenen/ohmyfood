@@ -20,23 +20,11 @@ main {
     @media (min-width: $tablet-breakpoint) {
         max-width: 1440px;
     }
-    
 }
 
 /* Partie logo - marque */
 
-header h1 {
-    width: 100%;
-    height: 63px;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @media (min-width: $mobile-breakpoint) {
-        height: 96px;
-    }
-}
+@include header;
 
 /* Partie localisation des restaurants les plus proches */
 
@@ -50,7 +38,6 @@ header h1 {
     justify-content: center;
     align-items: center;
     gap: 17px;
-
 }
 
 /* Partie exploration des restaurants du site */
@@ -100,23 +87,11 @@ header h1 {
         }
     }
  
+/* animation de l'arrivée progressive des parties du menuBouton explorer */
+
     h5 {
         width: 218px;
-        height: 50px;
-        color: $third-text-color;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
-        opacity: 1;
-        border-radius: 25px;
-        transition: all 0.3s ease;
-
-            &:hover {
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-            opacity: 0.8;
-            }
+        @include button;
     } 
            
 }
@@ -186,6 +161,8 @@ header h1 {
             p {
                 width: 24px;
                 height: 24px;
+                font-size: 14.18px;
+                font-weight: 500;
                 position: absolute; 
                 left: 20px;
                 background-color: $primary-color;
@@ -260,6 +237,8 @@ header h1 {
         }
     }
 
+/* Ensemble des différents restaurants */
+
     .cards{
         width: 100%;
         display: flex;
@@ -275,6 +254,8 @@ header h1 {
             justify-content: space-between;
             align-items: center;
         }
+
+/* Carte et lien d'un restaurant unique */
 
         .restaurant-link {
             width: 100%;
@@ -304,6 +285,8 @@ header h1 {
                 }
 
                 p {
+                    font-size: 14px;
+                    font-weight: 500;
                     background-color: $tertiary-color;
                     color: $new-text-color;
                     width: 80px;
@@ -344,36 +327,21 @@ header h1 {
                 }
             }
 
+/* Coeur de la carte */
+
             .fa-regular {
-                width: 25px;
-                height: 22px;
+                @include regular-heart;
                 position: absolute; 
                 top: 197px;
                 right: 26px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
             } 
             
             .fa-solid {
-                width: 25px;
-                height: 22px;
+                @include solid-heart;
                 position: absolute; 
                 top: 197px;
                 right: 26px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-clip: text;
-                color: transparent;
-                background-image: linear-gradient(to bottom right, $secondary-color, $primary-color);
-                opacity: 0;
-                transition: all 0.3s;
-
-                &:hover {
-                    opacity: 1;
-                    .fa-regular { display: none;}
-                }
+                
             }
         }
     }
@@ -381,72 +349,4 @@ header h1 {
 
 /* Partie informations - contact */
 
-footer {
-    width: 100%;
-    height: 186px;
-    background-color: $second-background-color;
-    color: $third-text-color;
-    padding: 22px 25px 22px 25px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-    @media (min-width: $tablet-breakpoint) {
-        max-width: 1440px;
-        height: 114px;
-        flex-direction: row-reverse;
-        align-items: flex-end;
-        top: 1261.38px;
-    }
-
-    h1 {
-        width: 137.58px;
-        height: 27px;
-        font-size: 18px;
-        font-weight: 400;
-    }
-
-    .informations {
-        width: 190px;
-        height: 99px;
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-
-        @media (min-width: $tablet-breakpoint) {
-            width: 661px;
-            height: 20px;
-            flex-direction: row;
-        }
-
-        .informations-icons {
-            width: 190px;
-            height: 19px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            gap: 7px;
-
-            i {
-                width: 11px;
-                height: 13px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            h5 {
-                width: 168px;
-                height: 19px;
-            }
-        }
-    }
-}
-
-.informations > h5 {
-    width: 130px;
-    height: 20px;
-    font-weight: 400;
-}
+@include footer;
