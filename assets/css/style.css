@@ -473,6 +473,14 @@ header h1 {
 .restaurants .cards .restaurant-link .fa-solid:active .fa-regular {
   display: none;
 }
+@media (min-width: 1024px) {
+  .restaurants .cards .restaurant-link .fa-solid:hover {
+    opacity: 1;
+  }
+  .restaurants .cards .restaurant-link .fa-solid:hover .fa-regular {
+    display: none;
+  }
+}
 
 /* Partie informations - contact */
 footer {
@@ -542,55 +550,6 @@ footer .informations .informations-icons h5 {
   font-weight: 400;
 }
 
-/* Breakpoint pour media queries */
-/* Partie couleur - général */
-/* Partie couleur de fond */
-/* Partie style du texte */
-h1, h2, h3, h4, h5, p {
-  margin: 0px;
-}
-
-h1 {
-  font-family: "Shrikhand";
-  font-style: italic;
-  font-weight: 400;
-}
-
-h2, h3, h4, h5, p {
-  font-family: "Roboto";
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 18px;
-}
-
-h4 {
-  font-size: 17px;
-  font-weight: 300;
-}
-
-h5 {
-  font-size: 16px;
-  font-weight: 500;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* loader de la page d'acceuil */
-/* Header des différentes pages */
-/* Footer des différentes pages */
-/* Boutons d'exploration ou de commande des différentes pages */
-/* Coeur vide */
-/* Coeur plein */
-/* Validation des plats sur le menu */
 /* Partie body - main - général */
 body {
   margin: 0px;
@@ -719,6 +678,14 @@ header .return {
 }
 .menu .restaurant-name .fa-solid:active .fa-regular {
   display: none;
+}
+@media (min-width: 1024px) {
+  .menu .restaurant-name .fa-solid:hover {
+    opacity: 1;
+  }
+  .menu .restaurant-name .fa-solid:hover .fa-regular {
+    display: none;
+  }
 }
 
 .menu-part {

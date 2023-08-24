@@ -201,7 +201,15 @@
     &:active {
         opacity: 1;
         .fa-regular { display: none;}
-    }    
+    }
+    
+    @media (min-width: $tablet-breakpoint) {
+        
+        &:hover {
+            opacity: 1;
+            .fa-regular { display: none;}
+        }
+    }
 }
 
 /* Validation des plats sur le menu */
