@@ -722,10 +722,13 @@ header .return {
   background-color: #ffffff;
   /* Description du plat */
 }
-.menu-part .dish:active .check, .menu-part .dish:active .dish-price {
+.menu-part .dish:hover .check, .menu-part .dish:hover .dish-price {
   animation: checking 0.5s forwards;
 }
-.menu-part .dish:not(:active) .check, .menu-part .dish:not(:active) .dish-price {
+.menu-part .dish:hover .dish-name {
+  gap: 59px;
+}
+.menu-part .dish:not(:hover) .check, .menu-part .dish:not(:hover) .dish-price {
   animation: reverse-checking 0.5s forwards;
 }
 @keyframes checking {
@@ -762,7 +765,6 @@ header .return {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 59px;
   /* Prix du plat */
 }
 .menu-part .dish .dish-name .dish-txt {

@@ -136,13 +136,15 @@ main {
             background-color: $first-background-color;
             
 
-            &:active {
+            &:hover {
                 .check, .dish-price {
                     animation: checking 0.5s forwards;
                 }
+                .dish-name {
+                    gap: 59px;}
             }
 
-            &:not(:active) {
+            &:not(:hover) {
                 .check, .dish-price {
                     animation: reverse-checking 0.5s forwards;
                 }
@@ -181,7 +183,6 @@ main {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            gap: 59px;
 
             .dish-txt {
                 width: 100%;
