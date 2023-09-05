@@ -793,6 +793,7 @@ header .return {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  background-color: #ffffff;
 }
 .menu-part .dish .dish-name .dish-price p {
   font-size: 15.04px;
